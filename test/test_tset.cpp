@@ -295,3 +295,9 @@ TEST(TSet, check_negation_operator)
 
   EXPECT_EQ(expSet, set1);
 }
+TEST(TSet, odin_ravno_odin)
+{
+	const int odin = 1;
+
+	EXPECT_EQ(1, odin);
+}
