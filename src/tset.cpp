@@ -130,9 +130,3 @@ ostream& operator<<(ostream &ostr, const TSet &s)
 	ostr << s.bitField << ' ';
 	return ostr;
 }
-
-ostream&  operator<<(ostream  &ostr,  const  TSet  &s)  //  вывод
-{
-    ostr  <<  s.bitField  <<  '  ';
-  return  ostr;
-}
