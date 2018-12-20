@@ -298,64 +298,64 @@ TEST(TSet, check_negation_operator)
 // ---------------------------------------------------------------------------
 TEST(TSet, true_equivalence_set)
 {
-	const int size = 5;
-	TSet set1(size), set2(size);
+  const int size = 5;
+  TSet set1(size), set2(size);
 
-	set1.InsElem(1);
-	set1.InsElem(2);
-	set1.InsElem(4);
+  set1.InsElem(1);
+  set1.InsElem(2);
+  set1.InsElem(4);
 
-	set2.InsElem(1);
-	set2.InsElem(2);
-	set2.InsElem(4);
+  set2.InsElem(1);
+  set2.InsElem(2);
+  set2.InsElem(4);
 
-	EXPECT_EQ(set1 == set2, true);
+  EXPECT_EQ(set1 == set2, true);
 }
 // ---------------------------------------------------------------------------
 TEST(TSet, false_equivalence_set)
 {
-	const int size = 5;
-	TSet set1(size), set2(size);
+  const int size = 5;
+  TSet set1(size), set2(size);
 
-	set1.InsElem(1);
-	set1.InsElem(2);
-	set1.InsElem(4);
+  set1.InsElem(1);
+  set1.InsElem(2);
+  set1.InsElem(4);
 
-	set2.InsElem(1);
-	set2.InsElem(2);
-	set2.InsElem(3);
+  set2.InsElem(1);
+  set2.InsElem(2);
+  set2.InsElem(3);
 
-	EXPECT_EQ(set1 == set2, false);
+  EXPECT_EQ(set1 == set2, false);
 }
 // ---------------------------------------------------------------------------
 TEST(TSet, true_anti_equivalence_set)
 {
-	const int size = 5;
-	TSet set1(size), set2(size);
+  const int size = 5;
+  TSet set1(size), set2(size);
 
-	set1.InsElem(1);
-	set1.InsElem(2);
-	set1.InsElem(4);
+  set1.InsElem(1);
+  set1.InsElem(2);
+  set1.InsElem(4);
 
-	set2.InsElem(1);
-	set2.InsElem(2);
-	set2.InsElem(3);
+  set2.InsElem(1);
+  set2.InsElem(2);
+  set2.InsElem(3);
 
-	EXPECT_EQ(set1 != set2, true);
+  EXPECT_EQ(set1 != set2, true);
 }
 // ---------------------------------------------------------------------------
 TEST(TSet, false_anti_equivalence_set)
 {
-	const int size = 5;
-	TSet set1(size), set2(size);
+  const int size = 5;
+  TSet set1(size), set2(size);
 
-	set1.InsElem(1);
-	set1.InsElem(2);
-	set1.InsElem(4);
+  set1.InsElem(1);
+  set1.InsElem(2);
+  set1.InsElem(4);
 
-	set2.InsElem(1);
-	set2.InsElem(2);
-	set2.InsElem(4);
+  set2.InsElem(1);
+  set2.InsElem(2);
+  set2.InsElem(4);
 
-	EXPECT_EQ(set1 != set2, false);
+  EXPECT_EQ(set1 != set2, false);
 }

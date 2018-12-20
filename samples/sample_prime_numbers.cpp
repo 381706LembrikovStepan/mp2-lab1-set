@@ -40,18 +40,18 @@ int main()
   cout << endl;
   cout << "В первых " << n << " числах " << count << " простых" << endl;
 
-	cout << "\n\n\tВвод битовой строки\n";
-	cout << "Введите размер битовой строки\n";
-	cin >> ExampleElem;
-	TBitField bit(ExampleElem);
-	cout << "Введите битовую строку длинной " << ExampleElem << "\n";
-	cin >> bit;
-	cout << "\nВаша битовая строка\n";
-	cout << bit;
-	cout << "\n\nМножество чисел битовой строки\n";
-	for (m = 0; m < ExampleElem; m++)
-		if (bit.GetBit(m))
-			cout << setw(3) << m << " ";
+  cout << "\n\n\tВвод битовой строки\n";
+  cout << "Введите размер битовой строки\n";
+  cin >> ExampleElem;
+  TBitField bit(ExampleElem);
+  cout << "Введите битовую строку длинной " << ExampleElem << "\n";
+  cin >> bit;
+  cout << "\nВаша битовая строка\n";
+  cout << bit;
+  cout << "\n\nМножество чисел битовой строки\n";
+  for (m = 0; m < ExampleElem; m++)
+    if (bit.GetBit(m))
+      cout << setw(3) << m << " ";
 }
 #else
 
@@ -59,7 +59,7 @@ int main()
 
 int main()
 {
-	int n, m, k, count, ExampleElem;
+  int n, m, k, count, ExampleElem;
 
   setlocale(LC_ALL, "Russian");
   cout << "Тестирование программ поддержки множества" << endl;
@@ -89,18 +89,18 @@ int main()
   cout << endl;
   cout << "В первых " << n << " числах " << count << " простых" << endl;
 
-	cout << "\n\n\tВвод множества целых чисел\n";
-	cout << "Введите наибольший элемент множества\n";
-	cin >> ExampleElem;
-	TSet bit(ExampleElem + 1);
-	cout << "Введите элементы множества. Для завершения ввода введите -1 или число более максимального\n";
-	cin >> bit;
-	cout << "\nВаше множество в представлении битовой строки\n";
-	cout << bit;
-	cout << "\n\nВаше множество в целых числах\n";
-	for (m = 0; m <= ExampleElem; m++)
-		if (bit.IsMember(m))
-			cout << setw(3) << m << " ";
+  cout << "\n\n\tВвод множества целых чисел\n";
+  cout << "Введите наибольший элемент множества\n";
+  cin >> ExampleElem;
+  TSet bit(ExampleElem + 1);
+  cout << "Введите элементы множества. Для завершения ввода введите -1 или число более максимального\n";
+  cin >> bit;
+  cout << "\nВаше множество в представлении битовой строки\n";
+  cout << bit;
+  cout << "\n\nВаше множество в целых числах\n";
+  for (m = 0; m <= ExampleElem; m++)
+    if (bit.IsMember(m))
+      cout << setw(3) << m << " ";
 }
 
 #endif
