@@ -2,6 +2,7 @@
 
 #include <gtest.h>
 
+
 TEST(TBitField, can_create_bitfield_with_positive_length)
 {
   ASSERT_NO_THROW(TBitField bf(3));
@@ -244,7 +245,7 @@ TEST(TBitField, can_invert_large_bitfield)
   bf.SetBit(35);
   negBf = ~bf;
 
-  for(int i = 0; i < size; i++)
+  for (int i = 0; i < size; i++)
     expNegBf.SetBit(i);
   expNegBf.ClrBit(35);
 
@@ -288,7 +289,7 @@ TEST(TBitField, can_invert_many_random_bits_bitfield)
 
   negBf = ~bf;
 
-  for(int i = 0; i < size; i++)
+  for (int i = 0; i < size; i++)
     expNegBf.SetBit(i);
   for (unsigned int i = 0; i < bits.size(); i++)
     expNegBf.ClrBit(bits[i]);
